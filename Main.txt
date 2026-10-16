@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first product name: ");
+        String product1 = sc.nextLine();
+
+        System.out.print("Enter first product price: ₹");
+        double price1 = sc.nextDouble();
+        sc.nextLine();
+
+        System.out.print("Enter second product name: ");
+        String product2 = sc.nextLine();
+
+        System.out.print("Enter second product price: ₹");
+        double price2 = sc.nextDouble();
+
+        System.out.println("\n--- Product Price Comparison ---");
+
+        System.out.println(product1 + " Price: ₹" + price1);
+        System.out.println(product2 + " Price: ₹" + price2);
+
+        if (price1 < price2) {
+            System.out.println(product1 + " is cheaper.");
+            System.out.println("You save ₹" + (price2 - price1));
+        } 
+        else if (price2 < price1) {
+            System.out.println(product2 + " is cheaper.");
+            System.out.println("You save ₹" + (price1 - price2));
+        } 
+        else {
+            System.out.println("Both products have the same price.");
+        }
+
+        sc.close();
+    }
+}
